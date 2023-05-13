@@ -11,4 +11,5 @@ public interface TarefaService {
     Tarefa findTarefaByNomeTarefa(String nomeTarefa);
     Tarefa updateTarefa();
     void deleteTarefa(long identificador);
+    abstract String getEntityTopic();
 }

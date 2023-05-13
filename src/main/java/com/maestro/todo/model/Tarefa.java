@@ -10,9 +10,9 @@ public class Tarefa {
     @Column(nullable = false, updatable = false)
     private Long identificador;
     private String nomeTarefa;
-    private Enum estadoTarefa;
+    private String estadoTarefa;
 
-    public Tarefa(Long identificador, String nomeTarefa, Enum estadoTarefa) {
+    public Tarefa(Long identificador, String nomeTarefa, String estadoTarefa) {
         this.identificador = identificador;
         this.nomeTarefa = nomeTarefa;
         this.estadoTarefa = estadoTarefa;
@@ -38,11 +38,11 @@ public class Tarefa {
         this.nomeTarefa = nomeTarefa;
     }
 
-    public Enum getEstadoTarefa() {
+    public String getEstadoTarefa() {
         return estadoTarefa;
     }
 
-    public void setEstadoTarefa(Enum estadoTarefa) {
+    public void setEstadoTarefa(String estadoTarefa) {
         this.estadoTarefa = estadoTarefa;
     }
 }
