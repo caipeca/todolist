@@ -47,8 +47,14 @@ public class TarefaServiceImpl implements TarefaService {
     }
 
     @Override
-    public Tarefa updateTarefa() {
-        return null;
+    public Tarefa updateTarefa(Tarefa tarefa) {
+
+        Tarefa tarefaAtualizar = repository.findByIdentificador(tarefa.getIdentificador());
+
+        tarefaAtualizar.setNomeTarefa(tarefa.getNomeTarefa());
+        tarefaAtualizar.setEstadoTarefa(tarefa.getEstadoTarefa());
+        repository.save(tarefaAtualizar);
+        return tarefaAtualizar;
     }
 
     @Override

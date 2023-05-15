@@ -13,15 +13,6 @@ public class WebSocketService {
         MESSAGINGTEMPLATE = messagingtemplate;
     }
 
-    /*public void execute(){
-      //  try {
-            Thread.sleep(2000L);
-            MESSAGINGTEMPLATE.convertAndSend("/statusProcessor");
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
-    */
     public void sendMessage(final  String topicSuffic){
         MESSAGINGTEMPLATE.convertAndSend("/tarefa/" + topicSuffic, "Default message from WS Service");
     }

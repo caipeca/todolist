@@ -9,7 +9,7 @@ public interface TarefaService {
     Tarefa registarTarefa(TarefaDTO tarefaDTO);
     List<Tarefa> getTarefa();
     Tarefa findTarefaByNomeTarefa(String nomeTarefa);
-    Tarefa updateTarefa();
+    Tarefa updateTarefa(Tarefa tarefa);
     void deleteTarefa(long identificador);
     abstract String getEntityTopic();
 }
